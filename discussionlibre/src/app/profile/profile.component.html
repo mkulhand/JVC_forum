@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div id="profile">
+	<div class="login">{{ profile.username }}</div>
+	<div class="description">
+	  <div class="info">
+		<table>
+		  <tr>
+			<td>Age</td>
+			<td>{{ profile.age }} ans</td>
+		  </tr>
+		  <tr>
+			<td>
+				Pays
+			</td>
+			<td>
+				<i class="fas fa-pen countryIconSelect" (click)="onPenClick()"></i>
+				<select name="" id="countrySelect">
+					<option value="" selected>{{ profile.country }}</option>
+					<option *ngFor="let item of countries; let i = index" value="{{ i }}">{{item}}</option>
+				</select>
+			</td>
+		  </tr>
+		  <tr>
+			<td>Membre depuis</td>
+			<td *ngIf="profile.member_since >= 0">{{ profile.member_since }} jour</td>
+			<td *ngIf="profile.member_since >= 2">{{ profile.member_since }} jours</td>
+		  </tr>
+		  <tr>
+			<td>Dernier passage</td>
+			<td>{{ profile.last_activity }}</td>
+		  </tr>
+		</table>
+	  </div>
+	  <p>
+		{{ profile.description }}
+	  </p>
+	</div>
+	<div class="totalMsg">
+		<p>
+			Nombre de messages postés sur le forum : {{ profile.msg_count }}
+		</p>
+		<table>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+		</table>
+	  
+	</div>
+  </div>

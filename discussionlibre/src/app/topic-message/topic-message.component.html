@@ -1,0 +1,42 @@
+<div id="topicHeader">
+	<h3><span>FORUM</span></h3>
+		<h1 class="sujet">
+			<span>Sujet : </span>
+			« {{ title }} »
+		</h1>
+		<div class="pagination">
+			<p>
+				<span *ngFor="let i of getArray()">
+					<a [ngClass]="{bgOrange: page.current === i}" routerLink="/forum/{{ topicID }}/{{ i }}">{{i}}</a>
+					<span style="padding: 5px 5px;">|</span>
+				</span>
+			</p>
+			<a routerLink="/forum/{{ topicID }}/{{ page.first }}" class="debut" *ngIf="page.current > 1">Début</a>
+			<a routerLink="/forum/{{ topicID }}/{{ page.prev }}" class="prec" *ngIf="page.current > 2">Précédent</a>
+			<a routerLink="/forum/{{ topicID }}/{{ page.end }}" class="fin" *ngIf="page.end !== page.current && page.end > 0">Fin</a>
+			<a routerLink="/forum/{{ topicID }}/{{ page.next }}" class="suiv"*ngIf="page.next !== 0 && page.current !== page.end">Suivant</a>
+			<a routerLink="/forum/0" class="listSujet">Liste des sujets</a>
+	</div>
+</div>
+<div id="messageHeaderBtn">
+		<button class="btn btn-grey" (click)="scrollDown()">REPONDRE</button>
+	<button class="btn btn-grey" (click)="refresh()">RAFRAICHIR</button>
+</div>
+<div id="message">
+		<div *ngFor="let item of messages">
+			<div class="header">
+				<div class="login" *ngIf="item.username; then usernameBlock; else noUsernameBlock"></div>
+					<ng-template #usernameBlock>
+						<span [ngStyle]="{'color': item.rank == 1 ? 'red' : 'black'}">{{ item.username }} </span>
+						<img src="/assets/images/bt_forum_profil.gif" alt="">
+					</ng-template>
+					<ng-template #noUsernameBlock><span class="compteSupp">Compte supprimé</span></ng-template>
+				<div class="datePost">{{item.date}}</div>
+			</div>	
+			<div class="body">
+				<p>{{item.text}}</p>
+			</div>
+	</div>
+</div>
+
+<app-answer-topic [topicID]="sendTopicID.asObservable()"></app-answer-topic>

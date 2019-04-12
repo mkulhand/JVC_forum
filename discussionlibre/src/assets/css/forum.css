@@ -1,0 +1,97 @@
+#forum {
+	width: 530px;
+	border-spacing: 1px;
+	border: 1px solid #dddddd;
+}
+
+#forum .header > th {
+	padding: 4px 2px;
+	font-size: 1.05em;
+	color: white;
+	background-color: #999;
+}
+
+#forum tr td {
+	height: 20px;
+	font-size: 0.8em;
+}
+
+#forum tr:nth-child(even) {
+	background-color: #E9EFFA;
+}
+
+#forum tr:nth-child(odd) {
+	background-color: #F5F5F5;
+}
+
+#forum .icon {
+	width: 10px;
+}
+
+#forum .dernierMsg {
+	width: 85px;
+}
+
+#forum .auteur {
+	width: 87px;
+	max-width: 100px;
+	word-break: break-work;
+	overflow: hidden;
+}
+
+#forum .auteur,
+#forum .icon,
+#forum .nbMsg,
+#forum .dernierMsg {
+	text-align: center;
+}
+
+#forum .nbMsg {
+	width: 30px;
+	max-width: 60px;
+	overflow: hidden;
+}
+
+#forum .sujet a {
+	text-decoration: none;
+	color: #0a77b8;
+	font-weight: bold;
+}
+
+#forum .sujet a:hover {
+	color: #ff5500;
+}
+
+#forum .sujet a:visited {
+	color: #888888;
+}
+
+#forum .sujet a div {
+	font-size: 0.9em;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+/*
+<table id="forum">
+	<tr class="header">
+		<th></th>
+		<th>Sujet</th>
+		<th>Auteur</th>
+		<th>Nb</th>
+		<th>Dernier Msg</th>
+	</tr>
+	<tr>
+		<td class="icon"><img src="http://image.jeuxvideo.com/pics/forums/topic_dossier1.gif" alt=""></td>
+		<td class="sujet">
+			<a href="#" target="_blank">
+				<div>[Catch] Topics controversés</div>
+			</a>
+		</td>
+		<td class="auteur">NyarNoMercy</td>
+		<td class="nbMsg">15</td>
+		<td class="dernierMsg">31/10/2009 12h03</td>
+	</tr>
+</table>
+*/

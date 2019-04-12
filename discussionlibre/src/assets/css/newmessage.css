@@ -1,0 +1,147 @@
+#newPost {
+	position: relative;
+	width: 530px;
+	border-right: 1px solid #9c0;
+	border-bottom: 1px solid #9c0;
+	border-left: 1px solid #9c0;
+}
+#newPost:before {
+	content: "";
+	background: white;
+	position: absolute;
+	right: -8px;
+	top: -2px;
+	width: 17px;
+	height: 8px;
+	transform: rotate(45deg);
+}
+#newPost h3 {
+	color: white;
+	background: #9c0;
+	width: auto;
+	line-height: 21px;
+	height: 21px;
+}
+#newPost h3 span {
+	font-size: 1.1em;
+	float: left;
+	padding-left: 18px;
+	background: url(http://image.jeuxvideo.com/css_img/defaut/bloc_fleche.gif) no-repeat;
+}
+#newPost .body {
+	margin-bottom: 45px;
+	color: #c00;
+	margin-left: 5px;
+	font-weight: bold;
+}
+#newPost .body form button {
+	float: right;
+	margin-right: 8px;
+}
+#newPost .body form .left {
+	float: left;
+	margin-right: 15px;
+}
+#newPost .body p {
+	font-family: Arial;
+}
+#newPost .body p span {
+	font-family: Arial;
+	text-decoration: none;
+	color: #0a77b8;
+	font-weight: bold;
+	background: url(http://image.jeuxvideo.com/css_img/defaut/puce_liste_orange.gif) no-repeat left center;
+	margin-left: 25px;
+	padding-left: 8px;
+}
+#newPost .body p span:hover {
+	cursor: pointer;
+	color: #ff5500;
+}
+#newPost .body p label {
+	font-family: Arial;
+}
+#newPost .body input {
+	margin-top: 5px;
+	width: 515px;
+}
+#newPost .body textarea {
+	-webkit-appearance: textarea;
+	background-color: white;
+	-webkit-rtl-ordering: logical;
+	flex-direction: column;
+	resize: auto;
+	cursor: text;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	border-width: 1px;
+	border-style: solid;
+	border-image: initial;
+	padding: 2px;
+	font-family: monospace;
+}
+
+/*
+NOUVEAU SUJET
+<div id="newPost">
+  <h3>
+    <span>CRÉER UN NOUVEAU SUJET</span>
+  </h3>
+  <div class="body">
+    <p>* Pseudo :<span>Hellotoulmonde</span></p>
+    <form action="#" method="POST">
+      <p>
+        <label for="sujet">* Sujet :</label>
+        <input type="text" id="sujet">
+      </p>
+      <p>
+        <label for="newmessage">* Message :</label>
+        <textarea tabindex="2" id="newmessage" name="yournewmessage" cols="71" rows="10" onfocus="vide_textarea();">Ne postez pas d'insultes, évitez les majuscules, faites une recherche avant de poster pour voir si la question n'a pas déjà été posée...
+
+Tout message d'incitation au piratage est strictement interdit et sera puni d'un bannissement.</textarea>
+      </p>
+      <button type="submit" class="btn btn-grey">POSTER</button>
+      <button type="submit" class="btn btn-white">APERÇU</button>
+    </form>
+  </div>
+</div>
+*/
+
+/* 
+REPONDRE SUJET
+<div id="newPost">
+  <h3>
+    <span>RÉPONDRE SUR CE SUJET</span>
+  </h3>
+  <div class="body">
+    <p>* Pseudo :<span>Hellotoulmonde</span></p>
+    <form action="#" method="POST">
+      <p>
+        <label for="newmessage">* Message :</label>
+        <textarea tabindex="2" id="newmessage" name="yournewmessage" cols="71" rows="10" onfocus="vide_textarea();">Ne postez pas d'insultes, évitez les majuscules, faites une recherche avant de poster pour voir si la question n'a pas déjà été posée...
+
+Tout message d'incitation au piratage est strictement interdit et sera puni d'un bannissement.</textarea>
+      </p>
+      <div class="left">
+        <button type="submit" class="btn btn-white">RETOUR LISTE DES SUJETS</button>
+        <button type="submit" class="btn btn-white">APERÇU</button>
+      </div>
+      <button type="submit" class="btn btn-grey">POSTER</button>
+    </form>
+  </div>
+</div>
+*/
+
+/*
+JAVASCRIPT CLEAR MESSAGE TEXTAREA
+
+let cleared = false;
+
+function vide_textarea() {
+  if (!cleared) {
+    document.getElementById("newmessage").value = "";
+    cleared = true;
+  }
+}
+
+*/

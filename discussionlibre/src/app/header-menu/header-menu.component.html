@@ -1,0 +1,13 @@
+<header>
+		<div class="left">
+			<a routerLink="/"><h2>Discussionlibre.com</h2></a>
+		</div>
+		<ul *ngIf="isLogged === 1">
+		<li> <a routerLink="/register">Créer un compte</a></li>
+		<li> <a routerLink="/auth">Se connecter</a></li>
+		</ul>
+		<ul *ngIf="isLogged === 2">
+		<li> <a routerLink="/profile">Mon compte</a></li>
+		<li> <a routerLink="/logout">Se déconnecter</a></li>
+		</ul>
+</header>

@@ -1,0 +1,17 @@
+<div id="newPost">
+	<h3>
+		<span>RÉPONDRE SUR CE SUJET</span>
+	</h3>
+	<div class="body">
+		<form>
+		<p>* Pseudo :<a routerLink='{{httpAction}}'><span>{{ username }}</span></a></p>
+		<p>
+			<label for="newmessage">* Message :</label>
+			<textarea tabindex="2" id="newmessage" name="yournewmessage" (focus)="clearTextarea($event)" name="message" required [(ngModel)]="topic.msg"></textarea>
+		</p>
+		<button type="submit" class="btn btn-white apercu" (click)="print()">APERÇU</button>
+		<button type="submit" class="btn btn-grey btn-goback retourListeSujet" (click)="goBack()">RETOUR LISTE DES SUJETS</button>
+		<button type="submit" class="btn btn-grey poster" (click)="postMessage()" [disabled]="submitDisabled" [ngStyle]="{'opacity': submitDisabled ? '0.5' : '1'}">REPONDRE</button>
+	</form>
+	</div>
+</div>

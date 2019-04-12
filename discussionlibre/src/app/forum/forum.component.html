@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div class="forumButton">
+	<div>
+		<a routerLink="/forum/{{ page.first }}" class="debut">Première page</a>
+		<a routerLink="/forum/{{ page.prev }}" class="prec">Page précédente</a>
+	</div>
+	<a class="refresh" (click)="pull()"><i class="fas fa-sync-alt fa-rotate"></i> Rafraichir</a>
+	<a routerLink="/forum/{{ page.next }}" class="suiv" *ngIf="page.next !== -1">Page suivante</a>
+</div>
+
+<table id="forum">
+		<tr class="header">
+			<th></th>
+			<th *ngIf="isAdmin"></th>
+			<th>Sujet</th>
+			<th>Auteur</th>
+			<th>Nb</th>
+			<th>Dernier Msg</th>
+		</tr>
+		<tr *ngFor="let item of topics; let i = index;">
+				<td class="icon">
+					<img [src]="item.icon" alt="Dossier" *ngIf="!isAdmin">
+					<img [src]="item.icon" alt="Dossier" *ngIf="isAdmin" (click)="setTopicStatus(i, 0)">
+				</td>
+				<td *ngIf="isAdmin" class="moderation">
+					<img src="/assets/images/topic_supp.png" alt="Supprimer le topic" (click)="deleteTopic(i)">
+					<img src="/assets/images/epingle-verte.gif" alt="Épingler le topic" (click)="setTopicStatus(i, 2)">
+					<img src="/assets/images/epingle-rouge.gif" alt="Épingler le topic et verrouiller" (click)="setTopicStatus(i, 3)">
+					<img src="/assets/images/topic_cadenas.gif" alt="Verrouiller le topic" (click)="setTopicStatus(i, 1)">
+				</td>
+				<td class="sujet">
+					<a routerLink='/forum/{{item.id}}/1'>
+						<div>{{ item.title }}</div>
+					</a>
+				</td>
+				<div *ngIf="item.username; then usernameBlock; else noUsernameBlock"></div>
+				<ng-template #usernameBlock><td class="auteur" [ngStyle]="{'color': item.rank == 1 ? 'red' : 'black'}">{{ item.username }}</td></ng-template>
+				<ng-template #noUsernameBlock><td class="compteSupp auteur">Compte supprimé</td></ng-template>
+				<td class="nbMsg">{{ item.msg_count }}</td>
+				<td class="dernierMsg">{{ item.last_updated }}</td>
+			</tr>
+</table>
+
+<div class="forumButton">
+	<div>
+		<a routerLink="/forum/{{ page.first }}" class="debut">Première page</a>
+		<a routerLink="/forum/{{ page.prev }}" class="prec">Page precedente</a>
+	</div>
+	<a class="refresh" (click)="pull()"><i class="fas fa-sync-alt fa-rotate"></i> Rafraichir</a>
+	<a routerLink="/forum/{{ page.next }}" class="suiv" *ngIf="page.next !== -1">Page suivante</a>
+</div>

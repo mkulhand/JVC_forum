@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div id="account">
+	<div>
+		<h2>Connexion</h2>
+		Si vous ne possédez pas encore de compte, <a routerLink="/register">cliquez-ici</a> pour vous inscrire !
+	</div>
+  <form>
+    <label for="pseudo">Pseudo :</label>
+    <input type="text" id="pseudo" required [(ngModel)]="user.username" name="username">
+    <label for="password">Mot de passe :</label>
+    <span>
+      <input type="{{ inputType }}" id="password" required [(ngModel)]="user.password" name="password">
+      <i class="fas fa-eye showPassword" title="Affiche votre mot de passe en clair" (click)="showPassword()"></i>
+    </span>
+    <button type="submit" class="btn btn-grey" (click)="authenticate()" [disabled]="submitDisabled" [ngStyle]="{'opacity': submitDisabled ? '0.5' : '1'}">Se Connecter</button>
+  </form>
+</div>

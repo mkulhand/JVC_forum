@@ -1,0 +1,46 @@
+#message > div {
+	border: solid 1px #D1D1D1;
+	width: 510px;
+	word-wrap: normal;
+	font-family: Arial;
+	margin-top: 12px;
+}
+#message > div:nth-child(odd) {
+	background: #F9F9F9;
+}
+#message > div:nth-child(even) {
+	background: #EFF4FC;
+}
+#message > div .header {
+	font-weight: bold;
+	width: 98%;
+	border-bottom: 1px dotted black;
+	margin: 0 auto;
+	height: 30px;
+	line-height: 30px;
+}
+#message > div .header .login {
+	float: left;
+}
+#message > div .header .datePost {
+	font-size: 0.85em;
+	float: right;
+}
+#message > div .body {
+	margin: 15px 5px 25px 5px;
+}
+
+/*
+<div id="message">
+  <div>
+    <div class="header">
+      <div class="login">Spyrou59 <img src="http://image.jeuxvideo.com/pics/forums/bt_forum_profil.gif" alt=""></div>
+      <div class="datePost">Posté le 7 octobre 2009 à 14:34:48</div>
+    </div>
+    <div class="body">
+      <p>Autre question, pendant que j'y suis ! Si un gars est super lourd, super chiant, qu'il trolle, etc. et que sur X message il se fera bannir, mais qu'on n'est pas sûr que le bannissement sera définitif alors qu'on le souhaite ainsi, on passe par l'alerte
+        queu même ou on vient là ?</p>
+    </div>
+  </div>
+</div>
+*/

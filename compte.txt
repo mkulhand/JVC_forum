@@ -1,0 +1,21 @@
+
+ip 5.135.182.168
+
+KIMSUFI / GMAIL
+contact.discussionlibre@gmail.com
+MDP : 4BwH9B94Auwv
+
+IONOS
+discussionlibre.com
+MDP : 4BwH9B94Auwv@
+
+compte Anonyme
+MDP : 2feq+$3115}']t41]/4``
+
+
+compte stan17:
+MDP : ucWawZf51
+
+/etc/mysql/mariadb.conf.d/50-server.cnf
+editer ligne : bind-address = 0.0.0.0
+mettre en commentaire : skip-external-locking

@@ -1,0 +1,144 @@
+#profile {
+	width: 480px;
+	height: 300px;
+}
+
+#profile .totalMsg {
+	font-size: 0.96em;
+	margin-top: 8px;
+	font-weight: bold;
+	width: 100%;
+	border: 1px solid #8BBDDD;
+	border-radius: 3px;
+	padding: 0px;
+	background: -webkit-linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+	background: -o-linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+	background: linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+}
+
+#profile .totalMsg p {
+	margin: 5px;
+}
+
+#profile .totalMsg table {
+	margin-top: 6px;
+	margin-left: 5px;
+	border-spacing: 1px;
+}
+
+#profile .totalMsg table td {
+	width: 6px;
+	height: 10px;
+	background: -webkit-linear-gradient(#F2CD36 0%, #C47446 100%);
+	background: -o-linear-gradient(#F2CD36 0%, #C47446 100%);
+	background: linear-gradient(#F2CD36 0%, #C47446 100%);
+}
+
+#profile .login {
+	color: #3D8AD8;
+	font-weight: bold;
+	font-size: 1.15em;
+	border: 1px solid #8BBDDD;
+	border-radius: 3px;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background: -webkit-linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+	background: -o-linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+	background: linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+}
+
+#profile .description {
+	margin-top: 8px;
+	word-break: break-word;
+	overflow: hidden;
+	width: 100%;
+	border: 1px solid #8BBDDD;
+	border-radius: 3px;
+	padding: 0px;
+	background: -webkit-linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+	background: -o-linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+	background: linear-gradient(#FFFFFF 0%, #EEEEEE 50%, #FFFFFF 100%);
+}
+
+#profile .description p {
+	margin: 5px;
+}
+
+#profile .description .info {
+	width: 45%;
+	float: right;
+	margin: 5px 5px 5px 3px;
+}
+
+#profile .description .info table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+#profile .description .info table tr td:nth-child(1) {
+	padding-right: 5px;
+	width: 50%;
+	text-align: right;
+	font-weight: bold;
+	font-size: 0.9em;
+	height: 18px;
+	background-color: #ffff99;
+	border: 1px solid #B8DB40;
+}
+
+#profile .description .info table tr td:nth-child(2) {
+	padding-left: 5px;
+	width: 50%;
+	text-align: left;
+	font-size: 0.9em;
+	height: 18px;
+	background-color: #ffffcd;
+	border: 1px solid #B8DB40;
+}
+
+/*
+
+<div id="profile">
+  <div class="login">Issou-City</div>
+  <div class="description">
+    <div class="info">
+      <table>
+        <tr>
+          <td>Age</td>
+          <td>34 ans</td>
+        </tr>
+        <tr>
+          <td>Pays</td>
+          <td>France</td>
+        </tr>
+        <tr>
+          <td>Membre depuis</td>
+          <td>27 jours</td>
+        </tr>
+        <tr>
+          <td>Dernier passage</td>
+          <td>17/01/2019</td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Suite à notre appel je t'envoie comme convenu les fonctionnalités pour la création d'un jv-like Dans l'ensemble il n y a pas beaucoup de changement à effectuer et de nouveauté par rapport aux forums classiques car j'ai retiré beaucoup d'éléments Tu trouveras
+      ci-joint les images présentant certaines fonctionnalités d'un vieux forum ainsi que les même images sur lesquelles j'ai apporté des modifications en me basant dessus pour le projet
+    </p>
+  </div>
+  <div class="totalMsg">
+    <p>
+      Nombre de messages postés sur le forum : 50.000
+      <table>
+        <td></td>
+        <td></td>
+        <td></td>
+      </table>
+    </p>
+  </div>
+</div>
+
+*/

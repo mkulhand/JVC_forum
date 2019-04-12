@@ -1,0 +1,17 @@
+html, body {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+* {
+	font-family: Tahoma, "DejaVu Sans Condensed", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+ul,
+li {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}

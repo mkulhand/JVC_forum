@@ -1,0 +1,58 @@
+header {
+	display: flex;
+	align-items: center;
+	background: #0382A6;
+	height: 60px;
+}
+header .left {
+	padding-left: 30px;
+}
+header .left h2 {
+	font-size: 1.7em;
+	padding: 0px;
+	margin: 0px;
+}
+
+@media screen and (max-width: 435px) {
+	* {
+		font-size: 10px;
+	}
+	header .left {
+		padding-left: 10px;
+	}
+}
+
+@media screen and (max-width: 485px) {
+	header ul {
+		position: absolute;
+		right: 0px;
+	}
+}
+
+@media screen and (min-width: 485px) {
+	header ul {
+		position: absolute;
+		right: 50px;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	header ul {
+		position: absolute;
+		right: 100px;
+	}
+}
+header ul li {
+	color: white;
+	line-height: 18px;
+	height: 20px;
+	display: inline-block;
+	padding-left: 12px;
+	padding-right: 5px;
+	background: #7c7c7c url(/assets/images/sommaire_puce.png) 3px center no-repeat;
+}
+header ul li:hover {
+	color: white;
+	cursor: pointer;
+	background: #3b3c36 url(/assets/images/sommaire_puce.png) 3px center no-repeat;
+}

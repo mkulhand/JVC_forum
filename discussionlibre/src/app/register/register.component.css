@@ -1,0 +1,54 @@
+
+@media screen and (max-width: 700px) {
+	#account {
+		margin: 5vh auto;
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	#account {
+		margin: 15vh auto;
+		width: 97%;
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+}
+#account div {
+	margin: 10px auto;
+	text-align: center;
+	line-height: 22px;
+	font-size: 0.9em;
+}
+#account div h2 {
+	font-size: 1.2em;
+	margin: 0;
+}
+#account form label {
+	color: #c00;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#account form input {
+	width: 100%;
+	height: 18px;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+#account form span {
+	position: relative;
+}
+#account form span .fa-eye {
+	position: absolute;
+	top: 1px;
+	right: 5px;
+}
+#account form span .fa-eye:hover {
+	cursor: pointer;
+}
+#account form button {
+	margin: 10px auto;
+	display: block;
+}

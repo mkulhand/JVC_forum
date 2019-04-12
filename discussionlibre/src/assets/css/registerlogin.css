@@ -1,0 +1,59 @@
+#account {
+    width: 500px;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  #account div {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #account div h2 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  #account form label {
+    color: #c00;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  #account form input {
+    width: 495px;
+    height: 18px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  #account form span {
+    position: relative;
+  }
+  #account form span .fa-eye {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+  }
+  #account form span .fa-eye:hover {
+    cursor: pointer;
+  }
+  #account form button {
+    margin: 10px auto;
+    display: block;
+  }
+  
+  
+/*
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div id="account">
+  <div><h2>Inscription</h2></div>
+  <form action="#" method="post">
+    <label for="login">Pseudo :</label>
+    <input type="text" id="login">
+    <label for="password">Mot de passe :</label>
+    <span><input type="password" id="password"><i class="fas fa-eye showPassword" title="Affiche votre mot de passe en clair"></i></span>
+    <button type="submit">S'inscrire</button>
+  </form>
+</div>
+*/
+
+/*
+
+*/
